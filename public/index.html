@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Site Title</title>
+        <meta name="description" content="">
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.ie.css" /><![endif]-->
+        <link rel="stylesheet" href="css/main.css?foo=7958">
+
+        <!-- HTML5 for oldIE -->
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('header'); document.createElement('nav'); document.createElement('section'); document.createElement('article');
+                document.createElement('aside'); document.createElement('footer'); document.createElement('hgroup');
+            </script>
+            <style>
+                header,nav,section,article,aside,footer,hgroup { display: block; }
+            </style>
+        <![endif]-->
+        <style>
+            #a {
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand hide" href="./index.html">Drainage Threat Map</a>
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="./index.html"><i class="icon-home icon-white"></i> Home</a></li>
+                            <li class="active"><a href="data-analysis.html">Data analysis</a></li>
+                            <li class="active"><a href="static-map.html">Static Maps </a></li>
+                        </ul>
+                        <!-- <div class="navbar-form pull-right" >
+                            <label for="searchbox" class="hide">Search</label>
+                            <input id="searchbox" class="span4" type="text" placeholder="Search" rel="popover" data-content="<ul><li><strong>Address</strong>: Enter the beginning of an address. Ex: for 700 North Tryon Street, try <em>700 n</em></li><li><strong>NPA</strong>: Enter the NPA number. Ex: <em>45</em></li><li><strong>Location</strong>: Enter the name of a location or a street. Ex: <em>freedom</em></li></ul>" data-original-title="Search" data-placement="bottom" data-html="true" data-trigger="focus">
+                            <button class="btn btn-inverse searchbtn" type="button">Go!</button>
+                        </div> -->
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead ================================================== -->
+        <!-- <header class="jumbotron subhead">
+            <!--[if lt IE 8]>
+                <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+            <![endif]-->
+          <!-- <div class="container">
+            <h1>Site Title <span class="text-info">more text</span></h1>
+            <h2 class="lead">Subtitle</h2>
+          </div>
+        </header> --> -->
+
+        <div class="container mt-5">
+            <div class="row main-row">
+                <div class="span12">
+                    <div class="row">
+                        <div id="data" class="span3 pull-left">
+                            <div class="overview">
+                                <h2>Welcome</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus eleifend aliquet. Fusce euismod lorem lacus, vitae tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum cursus elementum risus lobortis vestibulum. Maecenas in ligula massa, in dignissim augue. Sed neque massa, egestas quis auctor in, feugiat vestibulum tellus. Sed nec sapien sollicitudin ipsum venenatis aliquam. Nunc condimentum, est quis molestie suscipit, libero mauris egestas turpis, vitae pretium lorem nibh ac sem.
+                                </p>
+                                <p>
+                                   Vivamus non sapien urna. Sed eu ipsum odio, eget congue ipsum. Ut faucibus tortor sit amet urna hendrerit et consectetur odio molestie. Vivamus ut ornare elit. Phasellus id dui odio, sed consequat nisl. Praesent id odio et est aliquet congue a sed nulla. Ut massa magna, tincidunt non hendrerit et, condimentum et augue. Phasellus non accumsan nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin vel felis urna.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div id="map-area" class="span9 pull-right">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div><!-- end of main row -->
+            </div>
+
+            <hr>
+            <footer class="textcenter">
+                <p class="muted">
+                    <a href="#">Suza YouthMappers</a>
+                </p>
+            </footer>
+
+        </div><!-- /container -->
+
+
+        <!-- scripts at the bottom yo -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+        <script src="js/main.js?foo=7958"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-heat.js"></script>
+        <script src="data/drainagedata.js"></script>
+        <script src="data/Floodpronearea_1.js"></script>
+        <script src="data/blockagematerials_2.js"></script>
+        <script src="data/threatdraiange_3.js"></script>
+        <script src="data/threatwater_bodies_4.js"></script>
+        <script src="data/threatwastepoints_5.js"></script>
+        <script src="data/threatbuildings_6.js"></script>
+        <script src="data/shehias_7.js"></script>
+        <script src="data/buildings.js"></script>
+        <script src="data/floodbuffers.js"></script>
+
+
+		<script src="js/kazi.js"></script>
+
+    </body>
+
+</html>
