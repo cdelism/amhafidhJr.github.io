@@ -4,24 +4,7 @@ body{
     font-family: Roboto;
 }
 /* Navbar */
-.navbar{
-    max-height: 57px;
-}
-.navigation .navbar-brand{
-    color: white;
-    margin-left: 30px;
-    padding: inherit;
-    font-weight: bold;
-    background-color: #0BADA6;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.navbar{
-    background-color: white;
-    font-size: 15px;
-}
-.active, .dropdown-menu .dropdown-item:active a:hover{
-    background-color:#E7E7E7!important;
-}
+
 .dropdown-item{
     color: #6D8092 !important;
 }
@@ -43,11 +26,6 @@ color: rgb(175, 175, 175) !important;
 img{
     width:100% !important;
     height:100% !important;
-}
-.active, .panel:hover{
-    border-color:#0BADA6;
-    border-style: solid;
-
 }
 .vizualization{
     width:50% !important;
