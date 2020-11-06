@@ -7,38 +7,39 @@ var osmlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 
  //layer style
  var style_shehia = {
-     "color":"#cfcfcf",
+     "color":"#fcfcfc",
      "weight": 0.5,
      "opacity": 0.5,
      "dashArray": '5,5',
-    "fillColor": "#cfcfcf",
+    "fillColor": "#f5fcfc",
      "fillOpacity": 1
 };
  var style_buildings = {
-     "color":"#4f4e4d",
+     "color":"#cccfcf",
      "weight": 0.5,
      "opacity": 0.5,
      "dashArray": '5,5',
-    "fillColor": "#4f4e4d",
+    "fillColor": "#cccfcf",
      "fillOpacity": 1
 };
 var style_wastepoints = {
-    "color":"#242322",
-    "radius": 3.5,
+    "color":"#14ade0",
+    "radius": 16.5,
     "weight": 0.5,
     "opacity": 0,
-    "fillColor": "#242322",
+    "fillColor": "#7034a8",
     "fillOpacity": 1
 };
 var styleWater = {
-    "color":"#4f4e4d",
+    "color":"#122be3",
     "weight": 0.5,
     "opacity": 0,
-    "fillColor": "#8ADAFA",
+    "fillColor": "#14ade0",
     "fillOpacity": 1
 };
 var styleFloodpronearea = {
     "color":"#e66363",
+	 "radius": 16.5,
     "weight": 0.5,
     "opacity": 0,
     "fillColor": "#e66363",
@@ -61,30 +62,30 @@ var styleFloodpronearea = {
 	
 var bufferStyle = {
     "color":"#ff0505",
-    "weight": 0.5,
-    "opacity": 1,
-    "fillColor": "#ff0505",
+    "weight": 4,
+    "opacity": 5,
+    "fillColor": "#e66363",
     "fillOpacity": 0.5
 };
 	
  function styleBlockage(b) {
-     return b == 'concrete' ? '#ff0505' :
-            b == 'dirt'  ? '#00db37' :
-			b == 'dirty'  ? '#00db37' :
+     return b == 'concrete' ? '#f037be' :
+            b == 'dirt'  ? '#f5e50a' :
+			b == 'dirty'  ? '#f5e50a' :
 			b == 'metal'  ? '#00db37' :
-			b == 'grass or plant'  ? '#00db37' :
-			b == 'grass or plants'  ? '#00db37' :
-			b == 'grass_or_plant'  ? '#00db37' :
-			b == 'rubish or solid_waste'  ? '#00db37' :
-			b == 'rubish_or_solid_waste'  ? '#00db37' :
-			b == 'solid waste or rubish'  ? '#00db37' :
-			b == 'no'  ? '#00db37' :
-                       '#07cdf0';
+			b == 'grass or plant'  ? '#1a26d6' :
+			b == 'grass or plants'  ? '#1a26d6' :
+			b == 'grass_or_plant'  ? '#1a26d6' :
+			b == 'rubish or solid_waste'  ? '#242322' :
+			b == 'rubish_or_solid_waste'  ? '#242322' :
+			b == 'solid waste or rubish'  ? '#242322' :
+			b == 'no'  ? '#0dbf7e' :
+                       '';
  }
  function blockStyle(feature,map) {
      return { 
          opacity:1,
-         weight:2,
+         weight:5,
 		 color: styleBlockage(feature.properties.blockage_m),
          fillOpacity:1
      };
@@ -124,8 +125,8 @@ var blockages= L.layerGroup([blocked]).addTo(map);
 
 //layer control
  var overlays = {
-             "Threat toward drainage blockage":threats,
-			 "Impact":impact,
+             "Threat toward Drainage blockage":threats,
+			 "Flooding Impact of Drainage Blockage ":impact,
 			 "Blockage material":blockages
 			}; 
  var basemaps = {
