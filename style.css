@@ -79,7 +79,7 @@ padding-top: 15px;
 /* Media Queries */
 @media(max-width: 992px){
 .navbar-expand-lg{
-background-color: #0BADA6 !important;
+/* background-color: #0BADA6 !important; */
 }
 .navbar{
     max-height: none;
