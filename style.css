@@ -11,17 +11,17 @@ body{
 .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
     background-color:#E7E7E7 !important;
 }
-a{
+/* a{
     color: #6D8092;
     font-size: 15px;
-}
-.nav-link:hover{
+} */
+/* .nav-link:hover{
     background-color:#E7E7E7 !important;
-   }
+   } */
 
-.navbar-brand:hover{
+/* .navbar-brand:hover{
 color: rgb(175, 175, 175) !important;
-}
+} */
 /* Images */
 img{
     width:100% !important;
