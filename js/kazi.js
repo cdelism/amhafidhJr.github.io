@@ -160,7 +160,7 @@ var blockage_legend = L.control({position: 'bottomleft'});
 threats_legend.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
 div.innerHTML +=
-'<img src="./two.jpg" alt="legend" width="134" height="147">';
+'<img src="./two.jpeg" alt="legend" width="134" height="147">';
 return div;
 };
 
@@ -169,7 +169,7 @@ return div;
 impact_legend.onAdd = function (map) {
 var div = L.DomUtil.create('div', 'info legend');
     div.innerHTML +=
-    '<img src="./one.jpg" alt="legend" width="134" height="147">';
+    '<img src="./one.jpeg" alt="legend" width="134" height="147">';
 return div;
 };
 
@@ -178,7 +178,7 @@ return div;
 blockage_legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
         div.innerHTML +=
-        '<img src="./three.jpg" alt="legend" width="134" height="147">';
+        '<img src="./three.jpeg" alt="legend" width="134" height="147">';
     return div;
     };
     // blockage_legend.addTo(map); 
