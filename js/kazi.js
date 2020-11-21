@@ -102,7 +102,7 @@ var drainages = L.geoJson(drainage,{style:drainageStyle}) //drainage
 var waterbodies = L.geoJson(waterbodies,{style:styleWater}) //waterbodies
 var wastepoints = L.geoJson(wastepoints, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, style_wastepoints);
+        return L.circleMarker(latlng, style_wastepoints).bindPopup("Dump Site.");
     },
     //onEachFeature:onEachShop
 });
